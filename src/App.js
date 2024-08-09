@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Image } from "semantic-ui-react";
+import Header from "./components/Header";
+import FeaturedArticles from "./components/FeaturedArticles";
+import Tutorials from "./components/Tutorials";
+import SubsForm from "./components/SubscibeForm";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Container>
+    <Header />
+    <Image
+      src="https://picsum.photos/1200/400?random=7"
+      style={{ marginTop: "2em", marginBottom: "2em" }}
+    />
+    <FeaturedArticles />
+    <Tutorials />
+    <SubsForm />
+    <Footer />
+  </Container>
+);
 
 export default App;
